@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt]{report}
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{tikz}
@@ -11,6 +11,10 @@
 \usepackage{hyperref}
 \usepackage[round]{natbib}
 \usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{etoolbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -23,6 +27,20 @@
 \newcommand{\supervisor}{Vahab Esfandani}
 \newcommand{\modleader}{Prof. Dr. Sara Ramzani}
 \newcommand{\submissiontime}{SS0325}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\titleformat{\chapter}[hang]{\normalfont\bfseries\fontsize{14}{0}\selectfont}{\thechapter.\quad}{0pt}{\normalfont\bfseries\fontsize{14}{0}\selectfont}
+\titlespacing*{\chapter}{0pt}{12pt}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\maketitle{
 	{
@@ -42,7 +60,7 @@
 		{\Large\student\par}
 		\vspace{0.2cm}
 		{\large\module\par}
-		\vspace{10.2cm}
+		\vspace{10.25cm}
 		{\large\submissiontime\par}
 		\thispagestyle{empty} 
 		\newpage
@@ -97,19 +115,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{plain}
 \pagenumbering{roman}
-\maketitle
+\newgeometry{margin=2cm}\maketitle
 \makesubtitle
 \include{chapters/declaration} \justifying
+\restoregeometry
 \include{chapters/abstract}
 \tableofcontents 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\doublespacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \pagenumbering{arabic}
 \setlength\parindent{24pt}
-\preto\chapter{\setlength{\parindent}{24pt}}
 \include{chapters/introduction}
 \include{chapters/literature_review}
 \include{chapters/methodology}
@@ -122,7 +141,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{agsm}
 \renewcommand{\bibname}{References}
-\bibliography{attachments/bibliography}
+%\bibliography{attachments/bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
