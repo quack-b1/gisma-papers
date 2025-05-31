@@ -1,0 +1,9 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Berlin’s International Image}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Language and Employment in Globalized Cities}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Previous Research on Language Requirements}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Perception vs. Reality in Germany's Job Market}{4}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Methodology}{6}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Evaluation and Results}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{9}{chapter.5}%

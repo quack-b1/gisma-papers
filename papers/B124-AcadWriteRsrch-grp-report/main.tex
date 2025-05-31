@@ -15,7 +15,6 @@
 \usepackage{setspace}
 \usepackage{indentfirst}
 \usepackage{etoolbox}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -37,6 +36,9 @@
 
 \titleformat{\chapter}[hang]{\normalfont\bfseries\fontsize{14}{0}\selectfont}{\thechapter.\quad}{0pt}{\normalfont\bfseries\fontsize{14}{0}\selectfont}
 \titlespacing*{\chapter}{0pt}{12pt}{0pt}
+
+\titleformat{\section}[hang]{\normalfont\bfseries\fontsize{12}{0}\selectfont}{\thesection.\quad}{0pt}{\normalfont\bfseries\fontsize{12}{0}\selectfont}
+\titlespacing*{\section}{0pt}{21pt}{0pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -117,8 +119,7 @@
 \pagenumbering{roman}
 \newgeometry{margin=2cm}\maketitle
 \makesubtitle
-\include{chapters/declaration} \justifying
-\restoregeometry
+\include{attachments/declaration} \justifying\restoregeometry
 \include{chapters/abstract}
 \tableofcontents 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,12 +134,12 @@
 \include{chapters/literature_review}
 \include{chapters/methodology}
 \include{chapters/evaluation}
-\include{chapters/results}
 \include{chapters/conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\raggedright
 \bibliographystyle{agsm}
 \renewcommand{\bibname}{References}
 \bibliography{attachments/bibliography}
