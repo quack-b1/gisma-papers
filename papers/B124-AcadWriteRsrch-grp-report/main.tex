@@ -14,7 +14,7 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{indentfirst}
-\usepackage{etoolbox}
+\usepackage[none]{hyphenat}\sloppy
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -38,10 +38,6 @@
 	pdfkeywords={Language Requirements, Berlin, Job Market, International Image, Labor Market, English, German, Employment, Globalization, Expatriates, Immigrants}
 }
 
-
-\makeatletter
-\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-\makeatother
 
 \titleformat{\chapter}[hang]{\normalfont\bfseries\fontsize{14}{0}\selectfont}{\thechapter.\quad}{0pt}{\normalfont\bfseries\fontsize{14}{0}\selectfont}
 \titlespacing*{\chapter}{0pt}{12pt}{0pt}
@@ -128,7 +124,7 @@
 \pagenumbering{roman}
 \newgeometry{margin=2cm}\maketitle
 \makesubtitle
-\include{attachments/declaration} \justifying\restoregeometry
+\include{attachments/declaration} \restoregeometry\justifying
 \include{chapters/abstract}
 \tableofcontents 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,12 +134,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \pagenumbering{arabic}
-\setlength\parindent{24pt}
-\include{chapters/introduction}
-\include{chapters/literature_review}
+\setlength\parindent{20pt}
+\begingroup\let\clearpage\relax
+\include{chapters/introduction} \vspace{12pt}
+\include{chapters/literature_review} \endgroup
 \include{chapters/methodology}
 \include{chapters/evaluation}
-\include{chapters/conclusion}
+\include{chapters/conclusion} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
