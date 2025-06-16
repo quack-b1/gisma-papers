@@ -15,6 +15,8 @@
 \usepackage{setspace}
 \usepackage{indentfirst}
 \usepackage[none]{hyphenat}\sloppy
+\usepackage[toc,titletoc]{appendix}
+\usepackage{graphicx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -144,13 +146,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \raggedright
-\bibliographystyle{agsm}
+\phantomsection
 \renewcommand{\bibname}{References}
+\addtocounter{chapter}{1}\addcontentsline{toc}{chapter}{\thechapter\ \ \bibname} 
+\bibliographystyle{agsm}
 \bibliography{attachments/bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage \justifying
+\addtocounter{chapter}{1}\addcontentsline{toc}{chapter}{\thechapter\ \ Appendices} 
+\chapter*{Appendices}
+\setlength\parindent{20pt}
+\titleformat{\section}[hang]{\normalfont\bfseries\fontsize{12}{0}\selectfont}{}{0pt}{\normalfont\bfseries\fontsize{12}{0}\selectfont}
+\titleformat{\subsection}[hang]{\normalfont\fontsize{12}{0}\selectfont}{}{0pt}{\underline}
+\titlespacing*{\subsection}{0pt}{12pt}{0pt}
+
+\input{appendices/appendix_a}
+\input{appendices/appendix_b}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
