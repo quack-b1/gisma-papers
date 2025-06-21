@@ -17,6 +17,8 @@
 \usepackage[none]{hyphenat}\sloppy
 \usepackage[toc,titletoc]{appendix}
 \usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{blindtext}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -47,6 +49,12 @@
 \titleformat{\section}[hang]{\normalfont\bfseries\fontsize{12}{0}\selectfont}{\thesection.\quad}{0pt}{\normalfont\bfseries\fontsize{12}{0}\selectfont}
 \titlespacing*{\section}{0pt}{21pt}{0pt}
 
+\renewcommand\thesubsection{\thesection.\alph{subsection}\quad}
+
+
+\titleformat{\subsection}[hang]{\normalfont\fontsize{12}{0}\selectfont}{\uline{\thesubsection}}{-0.15em}{\uline}  
+\titlespacing*{\subsection}{0pt}{21pt}{0pt}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -55,7 +63,7 @@
 	{
 		\center
 		\begin{tikzpicture}[remember picture, overlay]
-			\node[opacity=0.2,inner sep=0pt] at (current page.south) [yshift=5cm]{
+			\node[opacity=0.3,inner sep=0pt] at (current page.south) [yshift=5cm]{
 				\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{attachments/campus}
 			};
 		\end{tikzpicture}
@@ -69,7 +77,7 @@
 		{\Large\student\par}
 		\vspace{0.2cm}
 		{\large\module\par}
-		\vspace{10.25cm}
+		\vspace{10.295cm}
 		{\large\submissiontime\par}
 		\thispagestyle{empty} 
 		\newpage
@@ -110,7 +118,7 @@
 		{\normalsize\bf\modleader\par}
 		\vspace{0.7cm}
 		{\normalsize Submission Quarter\par}
-		{\bf\large\submissiontime\par}
+		{\large\bf\submissiontime\par}
 		\center
 		\thispagestyle{empty}
 		\newpage
@@ -138,10 +146,10 @@
 \pagenumbering{arabic}
 \setlength\parindent{20pt}
 \begingroup\let\clearpage\relax
-\include{chapters/introduction} \vspace{12pt}
-\include{chapters/literature_review} \endgroup
-\include{chapters/methodology}
-\include{chapters/evaluation}
+\include{chapters/introduction} \vspace{6pt}
+\include{chapters/literature_review}
+\include{chapters/methodology} \vspace{12pt}
+\include{chapters/evaluation}\endgroup
 \include{chapters/conclusion} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -153,6 +161,7 @@
 \addtocounter{chapter}{1}\addcontentsline{toc}{chapter}{\thechapter\ \ \bibname} 
 \bibliographystyle{agsm}
 \bibliography{attachments/bibliography}
+\nocite{EU2020germany} \nocite{bmi2025} \nocite{Dietzel2024} \nocite{stat23} \nocite{Jones25}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
