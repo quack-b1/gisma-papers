@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt]{report}
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{tikz}
@@ -8,21 +8,48 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{parskip}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage[round]{natbib}
 \usepackage{ragged2e}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage[none]{hyphenat}\sloppy
+\usepackage{graphicx}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\papertitle}{Student Portolio Project Report}
-\newcommand{\student}{Ali Mohamed Abdou}
-\newcommand{\matrikelnummer}{GH1033452}
+\newcommand{\student}{Your Name}
+\newcommand{\matrikelnummer}{GH000000}
 \newcommand{\module}{B201 Computer Science Lab}
 \newcommand{\supervisor}{William Baker Morrison}
 \newcommand{\modleader}{Prof. Dr. Mohammad Mahdavi}
 \newcommand{\submissiontime}{SS0325}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+	pdftitle={\papertitle},
+	pdfsubject={B201 Computer Science Lab @ GISMA UNIVERSITY OF APPLIED SCIENCES},
+	pdfauthor={\student}
+}
+
+
+\titleformat{\chapter}[hang]{\normalfont\bfseries\fontsize{14}{0}\selectfont}{\thechapter.\quad}{0pt}{\normalfont\bfseries\fontsize{14}{0}\selectfont}
+\titlespacing*{\chapter}{0pt}{12pt}{0pt}
+
+\titleformat{\section}[hang]{\normalfont\bfseries\fontsize{12}{0}\selectfont}{\thesection.\quad}{0pt}{\normalfont\bfseries\fontsize{12}{0}\selectfont}
+\titlespacing*{\section}{0pt}{21pt}{0pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\maketitle{
 	{
@@ -42,7 +69,7 @@
 		\vspace{0.2cm}
 		{\Large\bf\student\par}
 		{\large\matrikelnummer\par}
-		\vspace{4cm}
+		\vspace{3.5cm}
 		{\large Submitted in  fulfillment of the final assessment for the module\par}
 		{\Large\bf\module\par}
 		\vspace{0.7cm}
@@ -51,7 +78,7 @@
 		\vspace{0.7cm}
 		{\large Module Leader\par}
 		{\large\bf\modleader\par}
-		\vspace{0.7cm}
+		\vspace{0.3cm}
 		{\large\submissiontime\par}
 		\thispagestyle{empty} 
 		\newpage
@@ -67,7 +94,6 @@
 \pagenumbering{roman}
 \maketitle
 \include{chapters/declaration} \justifying
-\include{chapters/abstract}
 \tableofcontents 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
