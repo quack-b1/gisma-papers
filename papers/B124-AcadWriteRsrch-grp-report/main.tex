@@ -135,8 +135,8 @@
 \newgeometry{margin=2cm}\maketitle
 \makesubtitle
 \include{attachments/declaration} \restoregeometry\justifying
-\include{chapters/abstract}
-\tableofcontents 
+\include{chapters/abstract} 
+\setstretch{1.12}\tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \doublespacing
@@ -147,15 +147,15 @@
 \setlength\parindent{20pt}
 \begingroup\let\clearpage\relax
 \include{chapters/introduction} \vspace{6pt}
-\include{chapters/literature_review}
+\include{chapters/literature_review} \vspace{12pt}
 \include{chapters/methodology} \vspace{12pt}
-\include{chapters/evaluation}\endgroup
-\include{chapters/conclusion} 
+\include{chapters/evaluation} \vspace{12pt}
+\include{chapters/conclusion}  \endgroup
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\raggedright
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\raggedright \clearpage
 \phantomsection
 \renewcommand{\bibname}{References}
 \addtocounter{chapter}{1}\addcontentsline{toc}{chapter}{\thechapter\ \ \bibname} 
@@ -166,9 +166,9 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage \justifying
+\clearpage \justifying \phantomsection
 \addtocounter{chapter}{1}\addcontentsline{toc}{chapter}{\thechapter\ \ Appendices} 
-\chapter*{Appendices}
+\chapter*{Appendices} 
 \setlength\parindent{20pt}
 \titleformat{\section}[hang]{\normalfont\bfseries\fontsize{12}{0}\selectfont}{}{0pt}{\normalfont\bfseries\fontsize{12}{0}\selectfont}
 \titleformat{\subsection}[hang]{\normalfont\fontsize{12}{0}\selectfont}{}{0pt}{\underline}
@@ -176,6 +176,9 @@
 
 \input{appendices/appendix_a}
 \input{appendices/appendix_b}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
