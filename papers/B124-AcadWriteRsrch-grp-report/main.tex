@@ -135,7 +135,6 @@
 \newgeometry{margin=2cm}\maketitle
 \makesubtitle
 \include{attachments/declaration} \restoregeometry\justifying
-\include{chapters/abstract} 
 \setstretch{1.12}\tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -145,6 +144,7 @@
 \clearpage
 \pagenumbering{arabic}
 \setlength\parindent{20pt}
+\include{chapters/abstract} 
 \begingroup\let\clearpage\relax
 \include{chapters/introduction} \vspace{6pt}
 \include{chapters/literature_review} \vspace{12pt}
@@ -159,7 +159,8 @@
 \phantomsection
 \renewcommand{\bibname}{References}
 \addtocounter{chapter}{1}\addcontentsline{toc}{chapter}{\thechapter\ \ \bibname} 
-\bibliographystyle{agsm}
+
+\bibliographystyle{agsm-mod}
 \bibliography{attachments/bibliography}
 \nocite{EU2020germany} \nocite{bmi2025} \nocite{Dietzel2024} \nocite{stat23} \nocite{Jones25}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
