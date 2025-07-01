@@ -1,3 +1,49 @@
 \chapter{Portfolio Structure}
+\section{Website Overview}
+The portfolio website adopts a one-page layout that emphasizes readability, responsiveness, and intuitive navigation. The design is centered on enhancing user experience and logical progression, thereby functioning as a clutter-free developer portfolio. The website features the following sections:
+\begin{itemize}
+	\item \textbf{Hero Section}: Features a profile image, name, and contact icons linking to GitHub, LinkedIn, and email.
+	\item \textbf{About Me}: A quick and efficient introduction to my background, interests, and career goals.
+	\item \textbf{Experience}: Lists relevant internships and roles with brief descriptions, dates, and locations..
+	\item \textbf{Education}: Highlights my academic qualifications, including the IB Diploma and current BSc studies.
+	\item \textbf{Certifications}: Displays key technical and extracurricular certifications using a clean list layout.
+	\item \textbf{Projects}: Showcases selected personal and academic projects with a carousel interface for interactivity.
+	\item \textbf{CV Download}: A download button that provides access to my LaTeX-generated curriculum vitae in PDF format.
+	\item \textbf{Language Toggle}: Users can seamlessly switch between English and German using a toggle button.
+\end{itemize}
 
-This is a chapter...
+\section{Repository Overview}
+The GitHub repository is structured to reflect a clean separation of concerns, improving maintainability and collaboration. The leading directories and files include:
+\begin{itemize}
+	\item \verb|/_includes|:
+	\begin{itemize}
+		\item \verb|/sections| and \verb|.sectuibs_de|: Markdown content files for each section in English and German, respectively.
+		\item \verb|project-carousel.html|: The single file including HTML, CSS, and JavaScript that enables projects to appear as tiles in a carousel on the main page.
+	\end{itemize}
+	\item \verb|/_layouts|:
+	\begin{itemize}
+		\item \verb|default.html|: The base layout template used to render the site.
+		\item \verb|error.html|: The error layout template used to render the 404 Not Found page.
+		\item \verb|projects.html|: The layout template for each project’s page (project1, project2, etc.).
+	\end{itemize}
+	\item \verb|/_projects|: Contains different project markdown files, such as project1.md
+	\item \verb|/_assets|:
+	\begin{itemize}
+		\item \verb|/css/styles.css|: The main stylesheet using manual CSS modifications and external formatting from Bootstrap.
+		\item \verb|/cv|: Contains the LaTeX file (.tex) and PDF output for my downloadable CV.
+		\item \verb|/images|: All images used in the site, such as my profile picture and project thumbnails.
+		\item \verb|/flags|: Contains the Deutschland and United Kingdom flags in SVG format for use in the language switcher
+	\end{itemize}
+	\item \verb|404.html|
+	\item \verb|_config.yml|: Jekyll configuration file defining site metadata and build behavior.
+	\item \verb|index.md| and \verb|index_en.md|: Entry points for the German and English homepages, written in Markdown.
+\end{itemize}
+Other notable files:
+\begin{itemize}
+	\item \verb|.gitignore|: Lists files and directories excluded from version control.
+	\item \verb|CNAME|: Used for domain configuration with GitHub Pages.
+	\item \verb|Gemfile| and \verb|Gemfile.lock|: Specify Ruby gems like \verb|jekyll| and \verb|minima| required to build the site.
+	\item \verb|README.md|: A brief description of the repository, currently empty apart from a short title and copyright.
+\end{itemize}
+
+Version control is actively used to track changes, maintain historical versions, and ensure deployment consistency. The repository is configured to deploy automatically via GitHub Pages from the main branch.\par

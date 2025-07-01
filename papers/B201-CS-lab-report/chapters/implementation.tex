@@ -1,0 +1,24 @@
+\chapter{Design and Implementation}
+The design and implementation of my portfolio website aim to establish a professional, clean, and responsive platform that accurately reflects both my technical competencies and personal brand. The emphasis was placed on usability, modularity, and efficient deployment.
+
+\section{Design Justifications}
+The design approach follows a minimalist aesthetic that prioritizes clarity and accessibility. The layout is a single-page scrollable format, which ensures that the entire content is easily discoverable without requiring navigation between pages. The visual hierarchy is maintained through font scaling, spacing, and component layout, utilizing the Jekyll Minima theme and Bootstrap CSS. Key design choices include:
+\begin{itemize}
+	\item \textbf{Color Scheme}: A fake-black background with white text was selected to reflect a calm and professional tone while maintaining readability across different devices. The overall dark theme coincides with every programmer’s favorite code editor theme (the light attracts bugs!).
+	\item \textbf{Typography}: A simple sans-serif font ensures legibility across devices, eliminating any possibility of design flaws due to unavailable fonts.
+	\item \textbf{Layout}: The use of a one-pager with all content ensures that the website is confined to precisely what it was designed for: a portfolio. The project carousel ensures that an infinite number of projects do not compromise the simplistic design of the portfolio; instead, they are presented on a single line rather than a long list.
+	\item \textbf{Responsiveness}: The use of a Jekyll theme ensures that the design adjusts gracefully for mobile, tablet, and desktop screens.
+\end{itemize}
+
+These design choices were informed by modern UI/UX principles and best practices. I asked myself what I would look for in a candidate’s portfolio if I were a recruiter and attempted to create the simplest, most straightforward portfolio I could think of, given the considerable time constraints.
+
+\section{Tools and Technologies Used}
+\begin{itemize}
+	\item \textbf{Jekyll}: A static site generator that integrates seamlessly with GitHub Pages. It enables modular content through layouts, \_includes, and Markdown-based sections. This eliminates the need for tedious CSS configuration and writing HTML from scratch, as the Jekyll package automatically converts Markdown files into HTML files upon rendering in a web environment.
+	\item \textbf{GitHub Pages}: Used for free and reliable hosting, with continuous and automatic deployment triggered by any push to the main branch of the repository.
+	\item \textbf{LaTeX}: Used to generate a clean, typographically sound CV. The resulting PDF is hyperlinked in the portfolio and available for download. LaTeX was also used to create this very same report.
+	\item \textbf{Git}: All developments were version-controlled through Git, with regular commits and rollbacks for experimentation and failed design attempts. I specifically used GitHub Desktop to manage all commits and version control, as it provides a graphical interface to interact with Git, rather than using a command-line interface (CLI).
+\end{itemize}
+
+\section{Multilingual Support}
+To make the portfolio accessible to both local (German-speaking) and international audiences, a language switcher is placed at the top of the site. Content is manually translated into different languages on various pages, allowing users to switch between English and German versions with a single page reload. This feature demonstrates both technical skill and cultural sensitivity. I initially attempted to have the page dynamically translated using JSON files, but this would require abandoning the Jekyll theme and converting all the site’s content to pure HTML5. Due to time constraints and other commitments, I chose the easier option of providing English and German versions on separate permalinks (\verb|/| for German, \verb|/en| for English).\par

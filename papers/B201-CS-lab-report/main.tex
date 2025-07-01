@@ -6,16 +6,14 @@
 \usepackage{tikz}
 \usepackage{eso-pic}
 \usepackage{booktabs}
-\usepackage{longtable}
 \usepackage{parskip}
 \usepackage[hidelinks]{hyperref}
-% \usepackage[round]{natbib}
 \usepackage{ragged2e}
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{indentfirst}
 \usepackage[none]{hyphenat}\sloppy
-\usepackage{graphicx}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -36,7 +34,7 @@
 \hypersetup{
 	pdftitle={\papertitle},
 	pdfsubject={B201 Computer Science Lab @ GISMA UNIVERSITY OF APPLIED SCIENCES},
-	pdfauthor={\student}
+	pdfauthor=\student
 }
 
 
@@ -143,21 +141,15 @@
 \pagenumbering{arabic}
 \setlength\parindent{24pt}
 \preto\chapter{\setlength{\parindent}{24pt}}
-\include{chapters/introduction}
-\include{chapters/overview}
-\include{chapters/structure}
-\include{chapters/design_choices}
-\include{chapters/tools}
-\include{chapters/reflection}
-\include{chapters/conclusion}
+\begingroup\let\clearpage\relax
+\include{chapters/introduction} \vspace{12pt}
+\include{chapters/structure} \vspace{12pt}
+\include{chapters/implementation} \vspace{12pt}
+\include{chapters/reflection} \vspace{12pt}
+\include{chapters/conclusion}\endgroup
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\bibliographystyle{agsm}
-%\renewcommand{\bibname}{References}
-%\bibliography{attachments/bibliography}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
