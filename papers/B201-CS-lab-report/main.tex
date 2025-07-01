@@ -9,7 +9,7 @@
 \usepackage{longtable}
 \usepackage{parskip}
 \usepackage[hidelinks]{hyperref}
-\usepackage[round]{natbib}
+% \usepackage[round]{natbib}
 \usepackage{ragged2e}
 \usepackage{titlesec}
 \usepackage{setspace}
@@ -55,35 +55,72 @@
 	{
 		\center
 		\begin{tikzpicture}[remember picture, overlay]
-			\node[opacity=0.2,inner sep=0pt] at (current page.south) [yshift=5cm]{
+			\node[opacity=0.4,inner sep=0pt] at (current page.south) [yshift=5cm]{
 				\includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{attachments/campus}
 			};
 		\end{tikzpicture}
 		\includegraphics[width=0.6\textwidth]{attachments/logo}\par
 		{\scshape\LARGE\bf Gisma University of Applied Sciences \par}
 		{\scshape\Large\bf Department of Computer and Data Sciences \par}
-		\vspace{2cm}
+		\vspace{2.4cm}
+		{\LARGE Individual Final Project}\par
 		\rule{\linewidth}{0.5mm}\par
 		{\huge\bfseries\papertitle\par}
 		\rule{\linewidth}{0.5mm}\par
 		\vspace{0.2cm}
 		{\Large\bf\student\par}
 		{\large\matrikelnummer\par}
-		\vspace{4cm}
-		{\large Submitted in  fulfillment of the final assessment for the module\par}
-		{\Large\bf\module\par}
-		\vspace{0.7cm}
-		{\large Lecturer\par}
-		{\large\bf\supervisor\par}
-		\vspace{0.7cm}
-		{\large Module Leader\par}
-		{\large\bf\modleader\par}
-		\vspace{0.7cm}
+		\vspace{10.25cm}
 		{\large\submissiontime\par}
 		\thispagestyle{empty} 
 		\newpage
 	}
 }
+
+
+\newcommand\makesubtitle{
+	{
+		\center
+		\includegraphics[width=0.4\textwidth]{attachments/logo2}\par
+		{\scshape\Large\bf Gisma University of Applied Sciences \\}
+		{\scshape\large\bf Department of Computer and Data Sciences \par}
+		\vspace{0.3cm}
+		\raggedright
+		\rule{\linewidth}{0.3mm}\par
+		\vspace{0.8cm}
+		\normalsize
+		Paper Title \par
+		\textbf{Individual Final Project: \papertitle}\par
+		\vspace{0.8cm}
+		GitHub Repository \par
+		\textbf{\url{https://github.com/quack-b1/quack-b1.github.io}}\par
+		\vspace{0.8cm}
+		Portolio Link \par
+		\textbf{\url{https://aliabdou.de}}\par
+		\vspace{0.8cm}
+		Report by:  \par
+		\begin{tabular}{@{}l@{\hspace{2em}}l@{\hspace{2em}}l}
+			\bf\normalsize{Ali Mohamed Abdou} & \matrikelnummer & alimohamed.fathi@gisma-student.com \\[0.6ex]
+		\end{tabular}\par
+		\vspace{0.8cm}
+		{\normalsize Submitted in fulfillment of the final assessment for the module\par}
+		{\normalsize\bf\module\par}
+		\vspace{0.7cm}
+		{\normalsize Lecturer\par}
+		{\normalsize\bf\supervisor\par}
+		\vspace{0.7cm}
+		{\normalsize Module Leader\par}
+		{\normalsize\bf\modleader\par}
+		\vspace{0.7cm}
+		{\normalsize Submission Quarter\par}
+		{\large\bf\submissiontime\par}
+		\center
+		\thispagestyle{plain}
+		\newpage
+	}
+}
+
+
 
 \begin{document} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,11 +129,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{plain}
 \pagenumbering{roman}
-\newgeometry{margin=2cm}\maketitle 
-\include{chapters/declaration} \restoregeometry\justifying
+\newgeometry{margin=2cm}
+\maketitle
+\makesubtitle 
+\include{attachments/declaration} \restoregeometry\justifying
 \tableofcontents 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\doublespacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -104,18 +144,19 @@
 \setlength\parindent{24pt}
 \preto\chapter{\setlength{\parindent}{24pt}}
 \include{chapters/introduction}
-\include{chapters/literature_review}
-\include{chapters/methodology}
-\include{chapters/evaluation}
-\include{chapters/results}
+\include{chapters/overview}
+\include{chapters/structure}
+\include{chapters/design_choices}
+\include{chapters/tools}
+\include{chapters/reflection}
 \include{chapters/conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{agsm}
-\renewcommand{\bibname}{References}
-\bibliography{attachments/bibliography}
+%\bibliographystyle{agsm}
+%\renewcommand{\bibname}{References}
+%\bibliography{attachments/bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
