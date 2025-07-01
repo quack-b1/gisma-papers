@@ -18,8 +18,16 @@
 \usepackage[toc,titletoc]{appendix}
 \usepackage{graphicx}
 \usepackage[normalem]{ulem}
+\usepackage{tabularx}  \usepackage{enumitem}
+\usepackage{array} \usepackage{makecell}
+\usepackage{xcolor} \usepackage{colortbl}
+\usepackage{tabularray}
+\usepackage[utf8]{inputenc}
+\usepackage[longtable]{multirow} \usepackage{hhline}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\definecolor{myblue}{HTML}{041E3C}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\papertitle}{California High-Speed Railway Project}
@@ -37,7 +45,7 @@
 	pdftitle={\papertitle},
 	pdfsubject={B113G Project Management @ GISMA UNIVERSITY OF APPLIED SCIENCES},
 	pdfauthor={\student},
-	pdfkeywords={Language Requirements, Berlin, Job Market, International Image, Labor Market, English, German, Employment, Globalization, Expatriates, Immigrants}
+	pdfkeywords={}
 }
 
 
@@ -116,7 +124,7 @@
 		{\normalsize Submission Quarter\par}
 		{\bf\large\submissiontime\par}
 		\center
-		\thispagestyle{empty}
+		\thispagestyle{plain}
 		\newpage
 	}
 }
@@ -131,8 +139,7 @@
 \newgeometry{margin=2cm}\maketitle
 \makesubtitle
 \include{attachments/declaration} \restoregeometry\justifying
-%\include{chapters/abstract}
-\tableofcontents 
+\setstretch{0.85} \tableofcontents 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \doublespacing
@@ -141,12 +148,17 @@
 \clearpage
 \pagenumbering{arabic}
 \setlength\parindent{20pt}
-%\begingroup\let\clearpage\relax
+\begingroup\let\clearpage\relax
 \include{chapters/1_introduction} 
-\include{chapters/2_scope} 
-\include{chapters/3_timeline}
-\include{chapters/4_budget}%\endgroup
-\include{chapters/conclusion} 
+\include{chapters/2_scope}  \vspace*{6pt}
+\include{chapters/3_timeline} \vspace*{12pt}
+\include{chapters/4_budget} \vspace*{12pt}
+\include{chapters/5_quality-management} \vspace*{12pt}
+\include{chapters/6_resource-management} \vspace*{12pt}
+\include{chapters/7_communications-management}
+\include{chapters/8_risks} 
+\include{chapters/9_stakeholders} \vspace*{12pt}
+\include{chapters/conclusion}  \endgroup
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
